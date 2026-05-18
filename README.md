@@ -4,7 +4,7 @@ A multilingual B2B web platform built with **Laravel 12** and a modular architec
 
 **Author:** Alexander Bet
 
-![Home page](screenshots-for-readme-only/home-full-page.png)
+![Home page](screenshots-for-readme-only/home-full-page.jpg)
 
 ---
 
@@ -28,17 +28,17 @@ A multilingual B2B web platform built with **Laravel 12** and a modular architec
 
 | Russian | English |
 |---------|---------|
-| ![Services RU](screenshots-for-readme-only/services-page-with-hero-section-in-russian.png) | ![Services EN](screenshots-for-readme-only/services-full-page-in-english.png) |
+| ![Services RU](screenshots-for-readme-only/services-page-with-hero-section-in-russian.jpg) | ![Services EN](screenshots-for-readme-only/services-full-page-in-english.jpg) |
 
 **Arabic — full RTL layout**
 
-![Services AR](screenshots-for-readme-only/services-page-with-hero-section-in-arabic.png)
+![Services AR](screenshots-for-readme-only/services-page-with-hero-section-in-arabic.jpg)
 
 ---
 
 ### Lead Capture Popup
 
-![Lead popup](screenshots-for-readme-only/popup-form-with-services.png)
+![Lead popup](screenshots-for-readme-only/popup-form-with-services.jpg)
 
 Service selector, email + phone with country code picker, Alpine.js — no page reload.
 
@@ -46,7 +46,7 @@ Service selector, email + phone with country code picker, Alpine.js — no page 
 
 ### Admin Panel (Moonshine 4)
 
-![Admin panel](screenshots-for-readme-only/admin-panel-screenshot.png)
+![Admin panel](screenshots-for-readme-only/admin-panel-screenshot.jpg)
 
 Full CRUD for services, articles, categories, leads, personnel, pricing, and site settings.
 
@@ -70,7 +70,7 @@ Images are converted to WebP by Spatie Media Library on upload. Blade outputs `<
 
 ### Performance
 
-![Speed test](screenshots-for-readme-only/speed-test-screenshot.png)
+![Speed test](screenshots-for-readme-only/speed-test-screenshot.jpg)
 
 Measured with DebugBear on local Docker: **TTFB 109 ms · FCP 184 ms · LCP 184 ms · CLS 0.08**.
 
