@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "name": "Laravel (backend)",
+            "path": "backend"
+        },
+        {
+            "name": "Project Root",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "intelephense.environment.phpVersion": "8.3.0",
+        "LaravelExtraIntellisense.basePath": "${workspaceFolder:Laravel (backend)}",
+        "LaravelExtraIntellisense.basePathForCode": "${workspaceFolder:Laravel (backend)}"
+    }
+}

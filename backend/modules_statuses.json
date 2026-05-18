@@ -1,0 +1,8 @@
+{
+    "Core": true,
+    "Blog": true,
+    "Services": true,
+    "Contact": true,
+    "Personnel": true,
+    "Pricing": true
+}

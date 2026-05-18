@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72">
+  <!-- Globe icon -->
+  <circle cx="36" cy="36" r="28" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <!-- Equator -->
+  <line x1="8" y1="36" x2="64" y2="36" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Upper latitude -->
+  <path d="M15 20 Q36 16 57 20" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Lower latitude -->
+  <path d="M15 52 Q36 56 57 52" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Central meridian -->
+  <ellipse cx="36" cy="36" rx="14" ry="28" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Orange accent dot -->
+  <circle cx="50" cy="18" r="6" fill="#ef6f2e"/>
+  <!-- Brand name -->
+  <text x="80" y="28" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#ffffff">Your Service</text>
+  <text x="80" y="52" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="15" letter-spacing="1.5" fill="#ef6f2e">SITE</text>
+</svg>

@@ -1,0 +1,11 @@
+storage/logs/
+backend/.env
+backend/vendor/
+backend/node_modules/
+backend/public/build/
+backend/public/hot
+backend/public/storage
+backend/.phpunit.result.cache
+backend/.phpunit.cache/
+backend/storage/*.key
+backend/storage/pail/

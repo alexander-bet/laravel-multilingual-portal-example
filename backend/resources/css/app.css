@@ -1,0 +1,158 @@
+@import '@glidejs/glide/dist/css/glide.core.min.css';
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+/* ─── Inter (LTR) ─────────────────────────────────────── */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/inter-500.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/inter-700.woff2') format('woff2');
+}
+
+/* ─── Sources ─────────────────────────────────────────── */
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../../Modules/**/*.blade.php';
+@source '../../Modules/**/*.js';
+
+/* ─── Brand tokens ────────────────────────────────────── */
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* Navy scale */
+    --color-navy-50:  #eef1f7;
+    --color-navy-100: #d5dcea;
+    --color-navy-200: #adbad5;
+    --color-navy-300: #7e94bc;
+    --color-navy-400: #506ea3;
+    --color-navy-500: #2d4d88;
+    --color-navy-600: #1d3a6e;
+    --color-navy:     #1d2d50;
+    --color-navy-800: #152240;
+    --color-navy-900: #0e1830;
+    --color-navy-950: #070d1c;
+
+    /* Brand orange scale */
+    --color-brand-50:  #fff4ee;
+    --color-brand-100: #ffe4d0;
+    --color-brand-200: #ffc49e;
+    --color-brand-300: #ff9e64;
+    --color-brand-400: #ff7930;
+    --color-brand:     #f07520;
+    --color-brand-600: #d9651a;
+    --color-brand-700: #b55214;
+    --color-brand-800: #8f3f0f;
+    --color-brand-900: #6a2e0b;
+    --color-brand-950: #3d1806;
+}
+
+/* ─── Keyframes ────────────────────────────────────────── */
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes spin-slow {
+    to { transform: rotate(360deg); }
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
+@layer base {
+    [x-cloak] { display: none !important; }
+
+    html { scroll-behavior: smooth; }
+}
+
+/* ─── Components ───────────────────────────────────────── */
+@layer components {
+    /* Shared nav dropdown panel */
+    .nav-dropdown-panel {
+        @apply absolute start-0 top-full z-50 min-w-48 bg-navy-100 py-2 shadow-xl;
+    }
+    .nav-dropdown-item {
+        @apply block px-4 py-2 text-sm text-navy transition-colors
+               hover:bg-navy-800 hover:text-white;
+    }
+
+    /* Service item in desktop mega-dropdown */
+    .nav-service-item {
+        @apply flex items-center gap-2.5 px-3 py-2.5 text-sm text-navy
+               transition-colors hover:bg-navy-800 hover:text-white;
+    }
+    .nav-service-item .nav-service-icon svg {
+        @apply size-5 shrink-0 text-brand;
+    }
+
+    /* Service item in mobile accordion */
+    .nav-service-item-mobile {
+        @apply flex items-center gap-2.5 rounded px-3 py-2 text-sm text-white/70
+               hover:bg-navy-800 hover:text-white;
+    }
+    .nav-service-item-mobile .nav-service-icon svg {
+        @apply size-4 shrink-0 text-brand;
+    }
+
+    /* Page entry animations */
+    .animate-fade-up {
+        animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .animate-slide-in-left {
+        animation: slide-in-left 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .animate-spin-slow {
+        animation: spin-slow 12s linear infinite;
+    }
+
+    /* Service card icon on the index page */
+    .service-card-icon svg {
+        @apply size-12 transition-colors;
+    }
+
+    /* Form fields */
+    .field {
+        @apply w-full rounded border border-gray-300 bg-white px-3 py-2.5 text-sm
+               text-gray-800 placeholder:text-gray-400
+               transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20;
+    }
+
+    /* Buttons */
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded bg-brand px-5 py-2.5
+               text-sm font-semibold uppercase tracking-wide text-white
+               transition hover:bg-brand-600 active:bg-brand-700
+               focus:outline-none focus:ring-2 focus:ring-brand/40;
+    }
+    .btn-navy {
+        @apply inline-flex items-center justify-center gap-2 rounded bg-navy px-5 py-2.5
+               text-sm font-semibold uppercase tracking-wide text-white
+               transition hover:bg-navy-800 active:bg-navy-900
+               focus:outline-none focus:ring-2 focus:ring-navy/40;
+    }
+    .btn-outline {
+        @apply inline-flex items-center justify-center gap-2 rounded border border-brand
+               px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-brand
+               transition hover:bg-brand hover:text-white
+               focus:outline-none focus:ring-2 focus:ring-brand/40;
+    }
+}
